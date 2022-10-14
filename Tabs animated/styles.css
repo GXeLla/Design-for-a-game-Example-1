@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    overflow: hidden;
+    font-family: 'Josefin Slab', serif;
+    font-family: 'Silkscreen', cursive;
+}
+.buttons {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    width: 100vw;
+    text-align: center;
+}
+#canvas1{
+    background: black;
+}
+.button{
+    position: relative;
+    width: 10%;
+    height: 50px;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 60px;
+    border: 5px solid white;
+    background: transparent;
+    transition: 0.2s;
+    font-size: 25px;
+    font-weight: 900;
+    color: white;
+    text-shadow: 50px 9px 3px white, -60px -9px 4px white;
+    line-height: 35px;
+    min-width: 225px;
+    background: black;
+}
+.button::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50px;
+    transition: 0.7s;
+    background: black;
+    -webkit-text-stroke: 2px white;
+}
+button:nth-child(1)::before {
+    content: 'Home';
+    font-family: 'Josefin Slab', serif;
+    font-family: 'Silkscreen', cursive;
+}
+button:nth-child(2)::before {
+    content: 'Shop';
+    font-family: 'Josefin Slab', serif;
+font-family: 'Silkscreen', cursive;
+}
+button:nth-child(3)::before {
+    content: 'About';
+    -webkit-text-stroke: 2px white;
+    font-family: 'Josefin Slab', serif;
+font-family: 'Silkscreen', cursive;
+}
+
+.button:hover::before{
+    color:rgba(13, 252, 252, 0.808);
+    text-shadow: 2px 2px 2px rgba(13, 252, 252, 0.808), -5px 5px 1px rgba(13, 252, 252, 0.808), 5px -5px 1px rgba(13, 252, 252, 0.808);
+    box-shadow: inset 10px 10px 15px #a80b0bc9, inset -10px -10px 15px #a80b0bc9, inset  -10px 10px 15px #a80b0bc9, inset  10px -10px 15px #a80b0bc9;
+}
+.button:hover{
+-webkit-text-stroke: 2px white;
+box-shadow: 10px 10px 15px #a80b0bc9, -10px -10px 15px #a80b0bc9, -10px 10px 15px #a80b0bc9, 10px -10px 15px #a80b0bc9;
+}
